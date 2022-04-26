@@ -1,0 +1,27 @@
+ALGORITHM algorithm_name
+VAR
+    c:CHAR
+    nb_voyelle:INTEGER:=0
+    nb_espace:INTEGER:=0
+    nb_caractere:INTEGER:=0
+    str:STRING[]
+BEGIN
+REPEAT
+    Write('Write a caractere: ')
+    Read(c)
+    IF (c in [a,e,i,u,y,o,A,E,I,U,Y,O] THEN
+    nb_voyelle:=nb_voyelle+1
+    END_IF
+    IF(C=" ") THEN
+    nb_espace:=nb_espace+1
+    ELSE
+     nb_caractere=nb_caractere+1
+    END_IF
+    concat(str,c)
+UNTIL (c='.')
+    Write('the sentence is :',str)
+    Write('number of voyelle :',nb_voyelle)
+    Write('number of caracteres :',nb_caractere)
+    Write('number of words :',nb_espace+1)
+    
+END
