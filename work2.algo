@@ -1,0 +1,22 @@
+ALGORITHM work2
+VAR
+    Set 1 : ARRAY_OF INTEGER[6]:=[3, 1, 7, 9]; 
+    Set 2: ARRAY_OF INTEGER[6]:=[2, 4, 1, 9, 3];
+    tab : ARRAY_OF INTEGER[];
+    found: BOOLEAN;
+    sum_distinct:INTEGER:=0;
+    sum_commun:INTEGER:=0;
+BEGIN
+    tab:=concat(set1,set2)
+    found:=false;
+    FOR i from 0 to tab.length Do
+     FOR j from 0 to tab.length Do
+      IF(tab[i]=tab[j]AND i<>j)THEN
+       found:=true
+       sum_commun=sum_commun+tab[i]
+       break;
+      END_IF
+    END_FOR
+      IF(found=false)THEN
+        sum_distinct=sum_distinct+tab[i]
+END
